@@ -71,4 +71,4 @@ select ename,deptno from employee;
 
 -- 10. Create a unique listing of all jobs that are in department 30. Include location
 --     of department 30 in the output.
-select distinct employee.job,department.deptno, department.locfrom employeeinner join departmenton employee.deptno = department.deptnowhere department.deptno=30-- 11 to 14 cannot be applied to qn3 as no student, course, or batch details are given.
+select distinct employee.job,department.deptno, department.locfrom employeeinner join departmenton employee.deptno = department.deptnowhere department.deptno=30-- 11 to 14 cannot be applied to qn3 as no student, course, or batch details are given.
