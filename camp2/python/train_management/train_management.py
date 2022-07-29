@@ -26,10 +26,6 @@ def connectDB(func):
 class Booking:
     def __init__(self):
         pass
-        # self.aadhar=aadhar
-        # self.name=name
-        # self.fromId =fromId
-        # self.toId=toId
     @connectDB
     def showPassengers(cursor,self,trainId):
         cursor.execute(f"select * from {trainId} where waitList = 0")
@@ -44,18 +40,14 @@ class Booking:
             select count(*) from {trainId}
             where waitList ={waitList};'''
         )
-        # print('train id',trainId)
         count =cursor.fetchall()
         rt =(trainId,'unavailable')
-        print("count 0 0 ",count[0][0])
         if count[0][0] <max:
-           #  print('count',count)
             if waitList == 0: 
                 rt =(trainId,'available')
             elif waitList == 1:
                 rt=(trainId,'waitList')
         else:
-            print("Enter first else on ",trainId)
             cursor.execute(f"select _index from Trains where trainId = '{trainId}';")
             index=cursor.fetchall()
             nextIndex=index[0][0]+1
@@ -65,12 +57,10 @@ class Booking:
                 rt = self.check(cursor.fetchall()[0][0])
             else: # to wait list
                 rt =self.check(ogTrainId,1,2)
-        print(rt)
         return rt
 
     @connectDB
     def bookAt(cursor,self,trainId,aadhar,name,fromId,toId,waitList=0):
-        print("Inside book at")
         cursor.execute(f"insert into Bookings values({aadhar},'{name}','{trainId}');")
         cursor.execute(f"select stId from Stations where name = '{fromId}'")
         fromId =cursor.fetchall()[0][0]
@@ -81,8 +71,6 @@ class Booking:
     def book(self,aadhar,name,fromId,toId):
         trainId = fromId+'_'+toId
         rt=self.check(trainId)
-        print("rt",rt)
-        #print(rt)
         if rt[1] == 'unavailable':
             print("No Seats Available")
         elif rt[1] == 'available':
@@ -93,7 +81,6 @@ class Booking:
 
 
 south =Booking()
-#create a menu to book a ticket and show the list of passengers
 while 1:
     print("1. Book a ticket")
     print("2. Show the list of passengers")
