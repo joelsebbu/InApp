@@ -155,7 +155,7 @@ while(1):
         if ch ==1:
             id = int(input("Enter id"))
             name =input("Name: ")
-            jubilee.update(id,paitentName =name)
+            jubilee.update(id,patientName =name)
         elif ch ==2:
             id = int(input("Enter id"))
             gender =input("gender: ")
