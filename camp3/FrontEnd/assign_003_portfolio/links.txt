@@ -1,0 +1,6 @@
+how to grow link: https://stackoverflow.com/questions/47960948/link-grow-font-on-hover
+color: http://blogs.quovantis.com/color-psychology-in-healthcare-products/#:~:text=Orange%20is%20a%20color%20that%20signifies%20health%2C%20happiness%2C%20and%20encouragement.
+change color of part of txt: https://stackoverflow.com/questions/11430252/changing-the-color-of-a-part-of-text-in-stylus-css
+custom ul : https://www.elated.com/making-lists-look-nicer-with-css/
+change mouse pointer: https://stackoverflow.com/questions/29824849/change-mouse-cursor-on-button-normal-to-pointer
+base reference: https://www.youtube.com/watch?v=lgeoAUvoRJU
