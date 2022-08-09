@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="boddy">
+        <div id ="heading">
+            <h2>Registration form</h2>
+        </div>
+        <div id ="form">
+            
+            <div class="groupify">
+                <label for="name">Full name</label>
+                <form>
+                    <input type="text" id="name" class="insert" placeholder="Enter Your Full Name">
+                    <p id ="name-miss">Name is missing</p>
+                    <p id ="name-min">Name must contain only characters</p>
+                </form>
+            </div>
+            <div class="groupify">
+                <label for="email">Email Address</label>
+                <form>
+                    <input type="email" id="email" class="insert" placeholder="Enter Your Email">
+                    <p id ="email-miss">email is missing</p>
+                </form>
+            </div>
+            
+            <div class="groupify">
+                <label for="phone">Phone Number</label>
+                <form>
+                    <input type="number" id="phone" class="insert" placeholder="Enter Your Number">
+                    <p id ="phone-miss">phone number missing</p>
+                    <p id ="phone-min">min 10 digits</p>
+                </form>
+            </div>
+           
+            <div class="groupify">
+                <label for="pass">Password</label>
+                <form>
+                    <input type="password" id="pass" class="insert" placeholder="Enter Password">
+                    <p id ="pass-miss">pasword missing</p>
+                    <p id ="pass-min">min 8 chars</p>
+                </form>
+            </div>
+           
+            <div class="groupify">
+                <label for="confirm">Confirm pasword</label>
+                <form>
+                    <input type="password" id="confirm" class="insert" placeholder="Password">
+                    <p id="confirm-miss">confirm password missing</p>
+                    <p id="confirm-match">password does not match</p>
+                </form>
+            </div>
+            <div id ="submit">
+                <button id ="submitButton">Submit</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
